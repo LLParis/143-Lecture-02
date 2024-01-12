@@ -1,3 +1,4 @@
+import java.util.*;
 class Lecture02 {
     public static void main(String[] args) {
         System.out.println("Hello from lecture 02");
@@ -17,16 +18,33 @@ class Lecture02 {
         // Put your answer for #3 here:
         // 3. Write the code to declare an ArrayList containing these elements. What is
         // the size of the list? What is its type?
+        ArrayList<String> poem = new ArrayList<>(5);
+        poem.add("It");
+        poem.add("was");
+        poem.add("a");
+        poem.add("stormy");
+        poem.add("night");
+
+        poem.forEach(word -> System.out.print(word + " "));
+        System.out.println();
+        // The initial size of the list is 5 and the type is String.
 
         // Put your answer for #4 here:
         // 4. Write code to insert two additional elements, "dark" and "and", at the
         // proper places in the list to produce the following ArrayList as the result:
         // ["It", "was", "a", "dark", "and", "stormy", "night"]
+        poem.add(3, "dark");
+        poem.add(4, "and");
+        poem.forEach(word -> System.out.print(word + " "));
+        System.out.println();
 
         // Put your answer for #5 here:
         // 5. Write code to change the second element’s value to "IS", producing the
         // following ArrayList as the result:
         // ["It", "IS", "a", "dark", "and", "stormy", "night"]
+        poem.set(1, "IS");
+        poem.forEach(word -> System.out.print(word + " "));
+        System.out.println();
 
         // Put your answer for #7 here:
         // 7. Write code to declare an ArrayList holding the first 10 multiples of 2: 0,
